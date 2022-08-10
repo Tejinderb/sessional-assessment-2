@@ -30,13 +30,13 @@
             </a>   
             <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="#postContainer">Post</a>
+                    <a class="nav-link" href="#dataContainer">DATA</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <div class="container d-flex justify-content-around flex-wrap" id="postContainer">
+    <div class="container d-flex justify-content-around flex-wrap" id="dataContainer">
         <!--CARD 1-->
         <div class="card m-5" style="width:18rem">
             <div class="card-body border-primary">
@@ -208,9 +208,13 @@
             </button>
             </div>
         </div>
+    <!--Footer-->
+    <div class="text-center p-3" style="background-color:#565e6b; color: white;">
+    DEVLOPED BY TEJINDER SINGH
+    </div>
 
     <script>
-        const postContainer=document.getElementById("postContainer");
+        const dataContainer=document.getElementById("dataContainer");
 let posts=[];
 let start=0,
     end=9;
@@ -244,9 +248,9 @@ function fetchPosts(){
             posts=res;
             console.log(posts);
 
-            postContainer.innerHTML=null;
+            dataContainer.innerHTML=null;
             for(let i=0;i<9;i++){
-                postContainer.innerHTML+=createPostCard(
+                dataContainer.innerHTML+=createPostCard(
                     posts[i].id,
                     posts[i].name,
                     posts[i].username,
